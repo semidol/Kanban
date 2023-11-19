@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+import Main from './Components/Main/Main';
+import dataMock from './dataMock';
+import { useState,createContext } from 'react';
+import { IContext } from './types';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+let initialValue:IContext = {
+    data: dataMock,
+    setData: null
 }
 
-export default App;
+export const DataContext = createContext(initialValue)
+
+export default function App() {
+    const [data, setData] = useState(dataMock)
+    const value = {data, setData}
+
+    return (
+        <DataContext.Provider value={value}>
+            <Header />
+            <Main />
+            <Footer />
+        </DataContext.Provider>   
+    )
+}

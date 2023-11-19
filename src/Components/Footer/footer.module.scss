@@ -1,0 +1,24 @@
+@import './../../variebles.scss';
+
+.footer {
+    background-color: $header-footer-color;
+    color: white;
+    font-size: 18px;
+    padding: 7px 0;
+}
+
+.wrapper {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.statusList {
+    margin-bottom: 7px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.status {
+    margin-right: 36px;
+}

@@ -1,0 +1,87 @@
+@import './../../../variebles.scss';
+
+.wrapper {
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    padding: 22px 28px;
+    height: 100%;
+}
+
+.cross {
+    height: 28px;
+    width: 28px;
+    top: 20px;
+    right: 23px;
+    position: absolute;
+    &::after, &::before {
+        position: absolute;
+        top: 14px;
+        display: block;
+        content: '';
+        width: 32px;
+        height: 1px;
+        background-color: black;
+        transform: rotate(-45deg);
+    }
+    &::after {
+        transform: rotate(45deg);
+    }
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: 400;
+    width: 621px;
+    word-wrap: break-word;
+    margin-bottom: 35px;
+}
+
+.desc {
+    font-size: 18px;
+    width: 621px;
+}
+
+.textarea {
+    display: block;
+    font-size: 18px;
+    height: 40vh;
+    width: 621px;
+    border: none;
+    outline: none;
+}
+
+.btn {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    background: $backgroung-color;
+    padding: 7px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        background: $header-footer-color;
+    } 
+}
+
+@media (max-width: 700px) {
+    .heading {
+        width: 100%;
+    }
+
+    .desc {
+        width: 100%;
+    }
+    
+    .textarea {
+        width: 100%;
+    }
+
+    .cross {
+        top: 2px;
+        right: 5px;
+    }
+}

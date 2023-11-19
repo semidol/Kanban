@@ -1,0 +1,12 @@
+@import './../../../variebles.scss';
+
+.card {
+    color: $text2-color;
+    font-size: 18px;
+    padding: 7px 9px;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    display: block;
+}

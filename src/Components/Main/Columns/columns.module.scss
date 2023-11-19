@@ -1,0 +1,9 @@
+@import './../../../variebles.scss';
+
+.wrapper {
+    gap: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

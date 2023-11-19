@@ -1,0 +1,17 @@
+@import './../../variebles.scss';
+
+.header {
+    background-color: $header-footer-color;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.logo {
+    font-weight: normal;
+    color: $text1-color;
+    font-size: 28px;
+}

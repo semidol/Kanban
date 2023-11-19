@@ -1,0 +1,105 @@
+@import './../../../variebles.scss';
+
+.heading {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.column {
+    margin-bottom: 45px;
+    border-radius: 10px;
+    background: $bg-column-color;
+    padding: 12px 0px 8px 12px;
+    width: 282px;
+    scrollbar-width: thin;          /* "auto" или "thin"  */
+    scrollbar-color: blue orange;
+    &::-webkit-scrollbar {
+        width: 12px;               /* ширина scrollbar */
+      }
+      &::-webkit-scrollbar-track {
+        background: orange;        /* цвет дорожки */
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: blue;    /* цвет плашки */
+        border-radius: 20px;       /* закругления плашки */
+        border: 3px solid orange;  /* padding вокруг плашки */
+      }
+}
+
+.cards {
+    padding-right: 12px;
+    overflow-y: auto;
+    max-height: 80vh;
+    scrollbar-width: thin;
+    scrollbar-color: #CBCBCB white;
+    &::-webkit-scrollbar {
+        width: 12px;               /* ширина scrollbar */
+    }
+    &::-webkit-scrollbar-track {
+        background: white;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #CBCBCB;    /* цвет плашки */
+        border-radius: 5px;       /* закругления плашки */
+    }
+}
+
+.btnPlus, .btnSubmit, .btnDisabled {
+    color: $btn-color;
+    border: none;
+    font-size: 18px;
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background: transparent;
+    cursor: pointer;
+    &:hover {
+        padding: 7px;
+        background: #FFF;
+    }
+}
+
+.btnSubmit {
+    color: white;
+    background: $backgroung-color;
+    padding: 7px;
+    &:hover {
+        background: $header-footer-color;
+    }
+}
+
+.btnDisabled {
+    cursor: default;
+    &:hover {
+        padding: 0;
+        background: transparent;
+    }
+}
+
+.btnNone {
+    display: none;
+}
+
+.input {
+    font-size: 18px;
+    padding: 7px 9px;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.select {
+    outline: none;
+    font-size: 18px;
+    padding: 5px 9px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
